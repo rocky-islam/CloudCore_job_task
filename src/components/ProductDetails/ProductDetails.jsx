@@ -23,28 +23,32 @@ const ProductDetails = () => {
   return (
     <div>
       <div>
-        <h1 className="lg:text-3xl text-center font-bold my-3">{product.name} Details</h1>
+        <h1 className="lg:text-3xl text-center font-bold my-3">
+          {product.name} Details
+        </h1>
       </div>
       <div className="flex justify-center">
-      <div className="card bg-base-100 w-sm md:w-md lg:w-lg shadow-sm">
-        <figure>
-          <img className="h-96 w-full"
-            src={`https://admin.refabry.com/storage/product/${image}`}
-            alt={name}
-          />
-        </figure>
-        <div className="card-body">
-        <h2 className="card-title">{name}</h2>
-          <p>Price: <span className="line-through">{price}TK</span> <span>{mainPrice}TK</span></p>
-          <p>Discount: {discount_amount}TK</p>
-          <p>
-           {short_desc}
-          </p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+        <div className="card bg-base-100 w-sm md:w-md lg:w-lg shadow-sm">
+          <figure>
+            <img
+              className="h-96 w-full"
+              src={`https://admin.refabry.com/storage/product/${image}`}
+              alt={name}
+            />
+          </figure>
+          <div className="card-body">
+            <h2 className="card-title">{name}</h2>
+            <p>
+              Price: <span className="line-through">{price}TK</span>{" "}
+              <span>{mainPrice}TK</span>
+            </p>
+            <p>Discount: {discount_amount}TK</p>
+            <p>{short_desc}</p>
+            <div className="card-actions justify-end">
+              <button className="btn btn-primary">Buy Now</button>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
